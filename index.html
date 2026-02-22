@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaiman Isles LLC | Digital Entertainment & Software</title>
+    <meta name="description" content="Kaiman Isles LLC - Digital entertainment and software development studio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1a1a 50%, #1a1a1a 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #c9a227 0%, #f4d03f 50%, #c9a227 100%);
+            border-radius: 20px;
+            margin: 0 auto 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(201, 162, 39, 0.3);
+        }
+
+        .logo-text {
+            font-size: 42px;
+            font-weight: 700;
+            color: #8b0000;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #c9a227 0%, #f4d03f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #b0b0b0;
+            margin-bottom: 50px;
+            font-weight: 400;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #8b0000 0%, #c41e3a 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(196, 30, 58, 0.4);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(196, 30, 58, 0.5);
+        }
+
+        .email-text {
+            margin-top: 20px;
+            color: #c9a227;
+            font-size: 0.95rem;
+        }
+
+        .game-section, .blog-section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .game-section h2, .blog-section h2 {
+            font-size: 1.5rem;
+            color: #c9a227;
+            margin-bottom: 24px;
+        }
+
+        .game-card {
+            background: rgba(139, 0, 0, 0.2);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+
+        .game-card h3 {
+            font-size: 1.75rem;
+            color: #f4d03f;
+            margin-bottom: 12px;
+        }
+
+        .game-card p {
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .store-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .store-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #c9a227 0%, #f4d03f 100%);
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+        }
+
+        .blog-section {
+            text-align: left;
+        }
+
+        .blog-post {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #c9a227;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .blog-post:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .post-date {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-post h3 {
+            font-size: 1.2rem;
+            color: #f4d03f;
+            margin: 8px 0 12px;
+        }
+
+        .blog-post p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #8b0000, #c9a227);
+            margin: 50px auto;
+            border-radius: 2px;
+        }
+
+        footer {
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            .tagline {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-text">KI</span>
+        </div>
+        <h1>Kaiman Isles LLC</h1>
+        <p class="tagline">Digital entertainment and software</p>
+        <a href="mailto:hello@kaimanisles.com" class="contact-btn">Get in Touch</a>
+        <p class="email-text">hello@kaimanisles.com</p>
+        
+        <div class="divider"></div>
+        
+        <!-- Instant Estresso Section -->
+        <section class="game-section">
+            <h2>🎮 Our Latest Game</h2>
+            <div class="game-card">
+                <h3>Instant Estresso</h3>
+                <p>Check out Instant Estresso, the fun barista mobile game app, now!</p>
+                <div class="store-buttons">
+                    <a href="#" class="store-btn">App Store</a>
+                    <a href="#" class="store-btn">Google Play</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <!-- Blog Section -->
+        <section class="blog-section">
+            <h2>📝 Latest Updates</h2>
+            
+            <article class="blog-post">
+                <span class="post-date">February 22, 2026</span>
+                <h3>Welcome to Kaiman Isles!</h3>
+                <p>We're excited to launch our new website. Stay tuned for updates on our games and projects. Our first mobile game, Instant Estresso, is coming soon to app stores!</p>
+            </article>
+            
+            <!-- Add more blog posts here by copying the article block above -->
+            <!--
+            <article class="blog-post">
+                <span class="post-date">Date Here</span>
+                <h3>Post Title Here</h3>
+                <p>Post content here...</p>
+            </article>
+            -->
+            
+        </section>
+        
+        <div class="divider"></div>
+        <footer>
+            &copy; 2026 Kaiman Isles LLC. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
